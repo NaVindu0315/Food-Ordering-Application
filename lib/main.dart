@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering/Views/MenuItems.dart';
 
+import 'Views/Dashboard.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MenuScreen(),
+      home: Dashboard(),
     );
   }
 }
