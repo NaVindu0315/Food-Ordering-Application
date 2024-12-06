@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-
 import '../Services/loadmenuitems.dart';
 import '../models/ItemModel.dart';
 import '../models/menu-item.dart';
-// Import your model class
 
 class ItemScreen extends StatefulWidget {
   @override
@@ -23,7 +20,7 @@ class _ItemScreenState extends State<ItemScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(' Items')),
+      appBar: AppBar(title: Text('Items')),
       body: FutureBuilder<ItemResponse>(
         future: futureitems,
         builder: (context, snapshot) {
@@ -42,6 +39,17 @@ class _ItemScreenState extends State<ItemScreen> {
             itemBuilder: (context, index) {
               final item = menuItems[index];
               return ListTile(
+                leading: Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.network(
+                    item.imageurl,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Center(child: Text('Image not found'));
+                    },
+                  ),
+                ),
                 title: Text(item.id),
                 subtitle: Text(item.menuId.toString() ?? 'No subtitle'),
                 onTap: () {
