@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../Services/loadmenuitems.dart';
 import '../models/menu-item.dart';
-// Import your model class
 
 class MenuScreen extends StatefulWidget {
   @override
@@ -44,7 +43,6 @@ class _MenuScreenState extends State<MenuScreen> {
                 title: Text(item.title),
                 subtitle: Text(item.createdDate.toString() ?? 'No subtitle'),
                 onTap: () {
-                  // Access specific fields
                   print('Menu ID: ${item.menuId}');
                   print('Store ID: ${item.storeId}');
                 },

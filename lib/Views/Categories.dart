@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Services/loadmenuitems.dart';
 import '../models/categorymodel.dart';
-// Import your fetch method
+
 import 'package:flutter/material.dart';
 
 class CategoryList extends StatelessWidget {
@@ -32,9 +32,7 @@ class CategoryList extends StatelessWidget {
               return ListTile(
                 title: Text(category.title),
                 subtitle: Text(category.menuCategoryId),
-                onTap: () {
-                  // Handle category tap
-                },
+                onTap: () {},
               );
             },
           );
