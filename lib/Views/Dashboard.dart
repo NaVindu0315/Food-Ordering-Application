@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
+import 'Categories.dart';
 import 'MenuItems.dart';
 
 class Dashboard extends StatefulWidget {
@@ -42,10 +43,9 @@ class _DashboardState extends State<Dashboard> {
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              /*
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const CategoriesScreen(),
-              ));*/
+                builder: (context) => CategoryList(),
+              ));
             },
             child: const Text('Categories'),
           ),
